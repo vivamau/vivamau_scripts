@@ -1,7 +1,7 @@
 import requests
 # go here to create a token for your app
 # https://www.yammer.com/client_applications
-token = "MYTOKENGOESHERE!"
+token = "MYTOKENGOESHERE"
 
 # this is the community ID
 groupID = "78686445568"
@@ -25,3 +25,5 @@ for x in range(numberofpages+1):
 	endpoint = "https://www.yammer.com/api/v1/users/in_group/{}.json?page={}".format(groupID,page)
 	data = requests.get(endpoint, headers=headers).json()
 print ("number of users: {}".format(count))
+
+# Print on a file, run: python3 yammer_UsersInACommunity.py > email.txt
